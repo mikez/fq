@@ -144,6 +144,9 @@ var (
 	Opus_Packet         = &decode.Group{Name: "opus_packet"}
 	PCAP                = &decode.Group{Name: "pcap"}
 	PCAPNG              = &decode.Group{Name: "pcapng"}
+	PE                  = &decode.Group{Name: "pe"}
+	PE_COFF             = &decode.Group{Name: "pe_coff"}
+	PE_MSDOS_Stub       = &decode.Group{Name: "pe_msdos_stub"}
 	Pg_BTree            = &decode.Group{Name: "pg_btree"}
 	Pg_Control          = &decode.Group{Name: "pg_control"}
 	Pg_Heap             = &decode.Group{Name: "pg_heap"}
