@@ -1,0 +1,55 @@
+Content-Type: multipart/mixed; boundary="===============5180456556228864705=="
+MIME-Version: 1.0
+From: sender@example.com
+To: recipient@example.com
+Subject: Test Email
+
+--===============5180456556228864705==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Greetings, fellow traveler! This is a test email with plain text content wr=
+apped using the MIME format specified in RFC 2045 of 1996.
+
+
+--===============5180456556228864705==
+Content-Type: image/image/png; name="image.png"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+Content-Disposition: inline
+
+iVBORw0KGgoAAAANSUhEUgAAAMgAAABkCAIAAABM5OhcAAAE7ElEQVR4nO3dbUxbVRzH8XOhhfUJ
+KC2jHThcYYiKgoubibCMbEZjYhaMiYZMdDrjIm9sYqIzOnTGxBhNms1sLJropomZiaLxIYYXZs5t
+cVOj6JgwsI5urCKro6MM6O0t9UW70tHe3mr49+n8Pq9u2xPy382XnvbSZgKr2cAAllpBpgeA/ISw
+gATCAhIIC0ggLCCBsIAEwgISCAtIICwggbCABMICEggLSCAsIIGwgATCAhIIC0ggLCCBsIAEwgIS
+CAtIICwggbCABMICEggLSCAsIIGwgATCAhIIC0ggLCCBsIAEwgISCAtIICwgocr0AFmhTC/dtWbS
+Zp0LMXbRqz4xWDJ0TpvpoXIbwmLPPnS++xGXblkwes+u92tePnh95ibKB7yH1d3p2rV1NNNT5CGu
+w1q53P/iw67ozZ/OGI6eKlWrQqfO6jI4VX7gOqwH2ybUqlD4+ECf5fE3bgiFMjtR/uD6XWFz3XT0
+2PFxNapaQlyHZS6RosdO97IMTpJ/uA5LU7zwTnDWX5jBSfIP12EVxvzr57EPLimuX7z/D5VG8c6b
+p6wm0aiXpmYKz5zX/jBk8E7jNC4m8Pl/6YS+OZLkUWHT4nMiCOz+Vs+OjnO31/sE4ZqHApLw1UnT
+c2/bhsc00R97fKC09enmpZw41+BXTVmlUfxo5+CGJm/CR9WqUHuL546GqcZta9M7V1bjNKxPvqtg
+jLU1e00lgdh74tmsc0cc/dUV/vDNkQuag32Wk4OGSz51RZm4/pbL2+4dt5SLVpO4zz6cnuFzAqdb
+Ydix3f0tjZfDx/HbH2NMrwl+/9YvjauuhG++fui67vdWidI1e6G2eN7R9ceT9/0Veye2Qq7fFSra
+2emKVvXahyt3vGNbVBVjbMZfsN1Rv6e3Ku3TZTWEJavcIHVtdoePf3dpX0r6eYdn9teOjuMS6wKE
+Jau91aPXRK6g7umtDsQ9V8WSgsK+z1ekZa7cgLBktcW8DfzyRLni+m/7y+iGyTkIS9aa1ZE/Uf89
+WXTBU6y4/iy2whgIS5a5NHIlYsKrTmX9pI/TazcJISxZRkMkrCuzKf19Ojif7EUYbxCWrIAUOTnR
+l/DJGbQpLeMEwpJ16erWVmX2p7LeqJeUF3EDYckaGdOED4wGyWadU1zfVDutuIYfCEvWsYHS6HF7
+i0dx/cbbvITT5BqEJav3qDl6/NRmd/RrFwkZtMFH7x6nHypnICxZvzr1h69e86yrmn1hiyvJ4h77
+sNGA11gLEFYy9r11/kDkFHV3uuwPjAlxlxQM2uAHzw9t2TTxz1RKl7s4gWt6yfz2p86+t7bHPsIY
+EwTm6HJ2bJw40Gc5Paqbni20lIttTd6t94xXlAUYY0+8Wf/pK6czPXK2QFgK9n+xQpQKeuzDRaoQ
+Y2xdg29dgy/hss+Om+Pv5xa2QmXvfm256bG1hw4vnxMTnC6nW7PdUd+1e3X6B8tmXD9jpf4hT6db
+0/Hqjdri+fW3emsq/aaSQEASLnqLfh7RD4zq8BXqeFyH9V/N+Av6flT+/AwwbIVABGEBCYQFJBAW
+kEBYQAJhAQmuvwkNdPCMBSQQFpBAWEACYQEJhAUkEBaQQFhAAmEBCYQFJBAWkEBYQAJhAQmEBSQQ
+FpBAWEACYQEJhAUkEBaQQFhAAmEBCYQFJBAWkEBYQAJhAQmEBSQQFpD4F2AIKwWJ+4HWAAAAAElF
+TkSuQmCC
+
+--===============5180456556228864705==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Goodbye!
+--===============5180456556228864705==--

@@ -4,8 +4,12 @@
 
 from email.charset import Charset, add_charset
 import email.encoders
+from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import io
+
+from PIL import Image, ImageDraw, ImageFont  # pip install pillow
 
 
 CHARSETS = ["utf-8", "iso-8859-1", "iso-8859-15", "us-ascii", "windows-1252"]
@@ -24,10 +28,15 @@ def main():
                     bytes(message), f"email_single_{language['id']}_{charset}_{cte}.eml"
                 )
 
-    # multipart
+    # multipart alternative with plaintext and HTML
     language, charset, cte = languages[0], "utf-8", "quoted-printable"
-    message = make_multipart_message(language, charset, cte)
+    message = make_multipart_alternative_message(language, charset, cte)
     save_bytes(bytes(message), f"email_multi_{language['id']}_{charset}_{cte}.eml")
+
+    # multipart with plaintext and images interleaved
+    language, charset, cte = languages[0], "us-ascii", "quoted-printable"
+    message = make_image_message(language, charset, cte)
+    save_bytes(bytes(message), f"email_image_{language['id']}_{charset}_{cte}.eml")
 
 
 def make_languages():
@@ -92,8 +101,8 @@ def make_singlepart_message(language_data, charset, cte):
     return result
 
 
-def make_multipart_message(language_data, charset, cte):
-    result = MIMEMultipart()
+def make_multipart_alternative_message(language_data, charset, cte):
+    result = MIMEMultipart("alternative")
     set_email_library_charset_default(charset, cte)
 
     # Add header
@@ -115,7 +124,46 @@ def make_multipart_message(language_data, charset, cte):
     return result
 
 
+def make_image_message(language_data, charset, cte):
+    result = MIMEMultipart()
+    set_email_library_charset_default(charset, cte)
+
+    # Add header
+    result["From"] = "sender@example.com"
+    result["To"] = "recipient@example.com"
+    result["Subject"] = language_data["subject"]
+
+    # Add plain text part
+    text = language_data["text"].format(mediatype=language_data["plain"])
+    plain_part = MIMEText(text + "\n\n", "plain", charset)
+    result.attach(plain_part)
+
+    # Add Image part
+    image_bytes = create_image("fq", 200, 100)
+    image_part = MIMEImage(image_bytes, "image/png", name="image.png")
+    image_part["Content-Disposition"] = "inline"
+    result.attach(image_part)
+
+    # Add another plain text part
+    plain_part = MIMEText("\n\nGoodbye!", "plain", charset)
+    result.attach(plain_part)
+
+    return result
+
+
 # Helpers
+
+
+def create_image(text, width, height, fontsize=40):
+    image = Image.new("RGB", (width, height), "#001f3f")
+    draw = ImageDraw.Draw(image)
+    font = ImageFont.load_default(size=fontsize)
+    bbox = draw.textbbox((0, 0), text, font=font)
+    text_position = ((width - bbox[2]) // 2, (height - bbox[3]) // 2)
+    draw.text(text_position, text, font=font, fill="#ffdc00")
+    result = io.BytesIO()
+    image.save(result, format="png")
+    return result.getvalue()
 
 
 def exclude(iterable, *target_items):

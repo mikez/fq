@@ -1,17 +1,18 @@
-Content-Type: multipart/mixed; boundary="===============3318194577275548908=="
+Content-Type: multipart/alternative;
+ boundary="===============0061868643840600761=="
 MIME-Version: 1.0
 From: sender@example.com
 To: recipient@example.com
 Subject: Test Email
 
---===============3318194577275548908==
+--===============0061868643840600761==
 Content-Type: text/plain; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
 
 Greetings, fellow traveler! This is a test email with plain text content wr=
 apped using the MIME format specified in RFC 2045 of 1996.
---===============3318194577275548908==
+--===============0061868643840600761==
 Content-Type: text/html; charset="utf-8"
 MIME-Version: 1.0
 Content-Transfer-Encoding: quoted-printable
@@ -19,4 +20,4 @@ Content-Transfer-Encoding: quoted-printable
 <html><body><p>Greetings, fellow traveler! This is a test email with HTML c=
 ontent wrapped using the MIME format specified in RFC 2045 of 1996.</p></bo=
 dy></html>
---===============3318194577275548908==--
+--===============0061868643840600761==--
