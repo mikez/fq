@@ -1,0 +1,9 @@
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+From: sender@example.com
+To: recipient@example.com
+Subject: Test Email
+
+Greetings, fellow traveler! This is a test email with plain text content wr=
+apped using the MIME format specified in RFC 2045 of 1996.

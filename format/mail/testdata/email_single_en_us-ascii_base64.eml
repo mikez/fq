@@ -1,0 +1,10 @@
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+From: sender@example.com
+To: recipient@example.com
+Subject: Test Email
+
+R3JlZXRpbmdzLCBmZWxsb3cgdHJhdmVsZXIhIFRoaXMgaXMgYSB0ZXN0IGVtYWlsIHdpdGggcGxh
+aW4gdGV4dCBjb250ZW50IHdyYXBwZWQgdXNpbmcgdGhlIE1JTUUgZm9ybWF0IHNwZWNpZmllZCBp
+biBSRkMgMjA0NSBvZiAxOTk2Lg==
